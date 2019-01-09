@@ -11,9 +11,9 @@ public class AsteroidHitReceiver : HitReceiver {
         {
             if (ObjectToSpawnOnDeath)
             {
-                AsteroidSpawner.Instance.CurrentAsteroidCount += 2;
+                AsteroidSpawner.Instance.CurrentCount += 2;
             }
-            AsteroidSpawner.Instance.CurrentAsteroidCount -= 1;
+            AsteroidSpawner.Instance.CurrentCount -= 1;
         }
 
     }

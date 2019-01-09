@@ -21,6 +21,16 @@ public class MovementComponent : MonoBehaviour {
 
         rb.MovePosition(transform.position + direction);
     }
+    public void Move(Vector3 direction)
+    {
+        
+    }
+    public void Move(Vector2 direction)
+    {
+        float x = direction.x;
+        float y = direction.y;
+        Move(x, y);
+    }
 
     public void LookTarget(Vector3 target)
     {

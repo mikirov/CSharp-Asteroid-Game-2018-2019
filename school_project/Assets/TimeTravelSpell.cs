@@ -15,23 +15,23 @@ public class TimeTravelSpell : Spell {
     [SerializeField]
     private float effectScale = 5.0f;
 
-
-    public override void Cast()
+    private void Awake()
     {
-        Debug.Log("casting time travel spell");
-        
-        
-        try
-        {
-            Caster.transform.position = GameStateController.Instance.GetPositionAtTime(Time.time - timeBack);
+        timeActive = timeBack + 0.5f;
+    }
+    public override IEnumerator Cast()
+    {
+
+        Vector3? newPosition = GameStateController.Instance.GetPositionAtTime(Time.time - timeBack);
+        if (newPosition != null) {
+            Caster.transform.position = (Vector3)newPosition;
             GameObject effect = Instantiate(TravelFx, Caster.transform);
             effect.transform.localScale *= effectScale;
-            Debug.Log("effect created");
+            //Debug.Log("effect created");
             Destroy(effect, effectDuration);
         }
-        catch(System.Exception e)
-        {
-            Debug.Log("could not travel back in time");
-        }
+        return null;
+
+
     }
 }

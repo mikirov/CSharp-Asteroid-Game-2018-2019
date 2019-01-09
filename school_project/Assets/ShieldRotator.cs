@@ -14,6 +14,18 @@ public class ShieldRotator : MonoBehaviour {
         transform.rotation *= Quaternion.Euler(new Vector3(0, 0, rotationPerSecond * Time.deltaTime));
 
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        HitReceiver hitReceiver = other.gameObject.GetComponent<HitReceiver>();
+        if (hitReceiver)
+        {
+            hitReceiver.ReceiveHit(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
 }

@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23074067791675532}
   - component: {fileID: 135093904418749634}
   - component: {fileID: 114694899007191602}
-  - component: {fileID: 114185233858255366}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Shield
@@ -86,30 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914805309199574}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114185233858255366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914805309199574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c60c06903406943881fa0be6fe6c17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToSpawnOnDeath: {fileID: 0}
-  DestructionFX: {fileID: 100000, guid: 6d5757192829bfc4c972d81356cd3e3f, type: 2}
-  HitFX:
-  - {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  SpawnDistance: 2
-  DeflectionAngle: 45
-  DestructionFXDuration: 0.5
-  HitFXDuration: 0.5
-  ScoreOnDeath: 0
-  DebugDraw: 0
-  hitsToKill: 3
-  hitScale: 1
-  currentHits: 0
 --- !u!114 &114694899007191602
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +104,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914805309199574}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

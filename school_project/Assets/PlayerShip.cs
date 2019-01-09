@@ -9,11 +9,15 @@ public class PlayerShip : Ship {
     {
         base.Start();
         GameStateController.Instance.RegisterPlayer(gameObject);
-        if(AsteroidSpawner.Instance != null)
+        if (AsteroidSpawner.Instance)
         {
             AsteroidSpawner.Instance.RegisterPlayer(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        if (EnemySpawner.Instance)
+        {
+            EnemySpawner.Instance.RegisterPlayer(gameObject);
+        }
+        //DontDestroyOnLoad(gameObject);
     }
     // Update is called once per frame
     private void Update () {

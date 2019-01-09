@@ -33,6 +33,14 @@ public class Ship : MonoBehaviour {
         movementComponent.Move(x, y);
 
     }
+    protected void Move(Vector2 direction)
+    {
+        movementComponent.Move(direction);
+    }
+    protected void Move(Vector3 direction)
+    {
+        movementComponent.Move(direction);
+    }
     protected void LookTarget(Vector3 target)
     {
         movementComponent.LookTarget(target);

@@ -12,6 +12,7 @@ public class GameStateController : MonoBehaviour {
     public string BossBattleScene = "BossBattle";
     public string WinScene = "WinScene";
     public string MainMenuScene = "Menu";
+    public string EnemyScene = "Enemies";
     private uint CurrentScore = 0;
     public uint CurrentAsteroids;
     public static GameStateController Instance { get; private set; }
@@ -52,7 +53,7 @@ public class GameStateController : MonoBehaviour {
         Vector4 positionAtTime = new Vector4(position.x, position.y, position.z, Time.time);
         playerPositionAtTime.Add(positionAtTime);
     }
-    public Vector3 GetPositionAtTime(float time)
+    public Vector3? GetPositionAtTime(float time)
     {
         for(int i = 0; i < playerPositionAtTime.Count; i++)
         {
@@ -62,7 +63,7 @@ public class GameStateController : MonoBehaviour {
                 return result;
             }
         }
-        throw new System.Exception();
+        return null;
     }
 
 
@@ -85,7 +86,7 @@ public class GameStateController : MonoBehaviour {
     }
     public void OnAsteroidsKilled()
     {
-        LoadAsteroidScene();
+        LoadEnemyScene();
     }
 	public void IncrementScore(uint scoreToAdd)
 	{
@@ -126,6 +127,11 @@ public class GameStateController : MonoBehaviour {
     {
         SceneManager.LoadScene(BossBattleScene);
         lastScene = BossBattleScene;
+    }
+    public void LoadEnemyScene()
+    {
+        SceneManager.LoadScene(EnemyScene);
+        lastScene = EnemyScene;
     }
     public void LoadLastScene()
     {
