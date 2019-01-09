@@ -88,6 +88,10 @@ public class GameStateController : MonoBehaviour {
     {
         LoadEnemyScene();
     }
+    public void OnEnemiesKilled()
+    {
+        LoadBossBattleScene();
+    }
 	public void IncrementScore(uint scoreToAdd)
 	{
 		CurrentScore += scoreToAdd;

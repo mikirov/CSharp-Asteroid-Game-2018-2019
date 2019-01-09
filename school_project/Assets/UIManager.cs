@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
 
     public IEnumerator Cooldown(float time, int index)
     {
-        Debug.Log("cooldown on spell with time:" + time + " and index:" + index);
+        //Debug.Log("cooldown on spell with time:" + time + " and index:" + index);
         cooldownMask[index].enabled = true;
 
         float currentCooldown = time;

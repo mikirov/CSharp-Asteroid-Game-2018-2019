@@ -49,7 +49,7 @@ public class HitReceiver : MonoBehaviour {
         }
         if (HitFX.Count != 0)
         {
-            Debug.Log("should show effect");
+            //Debug.Log("should show effect");
             GameObject spawnedFX = Instantiate(HitFX[Random.RandomRange(0,HitFX.Count)], transform.position, Random.rotation);
             spawnedFX.transform.localScale *= hitScale;
             Destroy(spawnedFX, HitFXDuration);

@@ -51,6 +51,10 @@ public abstract class Spawner: MonoBehaviour {
             SpawnNewPrefabs();
             IsSpawningFinished = true;
         }
+        else if(PlayerShip == null)
+        {
+            Debug.Log("playership not set");
+        }
     }
 
     private void MarkPlayerSafeArea()
@@ -115,7 +119,7 @@ public abstract class Spawner: MonoBehaviour {
         }
     }
 
-    private void SpawnNewPrefabs()
+    protected void SpawnNewPrefabs()
     {
         List<Vector3> Positions = FindFreePositions(Count);
         for (int i = 0; i < Positions.Count; ++i)

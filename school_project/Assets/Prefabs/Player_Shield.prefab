@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135093904418749634}
   - component: {fileID: 114694899007191602}
   m_Layer: 0
-  m_Name: Shield
+  m_Name: Player_Shield
   m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationPerSecond: 180
+  passTroughTags:
+  - Projectile
 --- !u!135 &135093904418749634
 SphereCollider:
   m_ObjectHideFlags: 1

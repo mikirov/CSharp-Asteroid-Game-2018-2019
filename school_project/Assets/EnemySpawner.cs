@@ -27,11 +27,22 @@ public class EnemySpawner : Spawner {
 
     private void Update()
     {
-        if(CurrentCount == 0 && currentWave <= waves)
+        base.Update();
+        if (CurrentCount == 0)
         {
-            IsSpawningFinished = false;
-            base.Update();
+            currentWave++;
         }
+        if (CurrentCount == 0 && currentWave < waves)
+        {
+            SpawnNewPrefabs();
+        }
+
+        else if(currentWave == waves && CurrentCount == 0)
+        {
+            GameStateController.Instance.OnEnemiesKilled();
+        }
+
+        Debug.Log("wave:" + currentWave + "currentCount:" + CurrentCount);
 
     }
 
@@ -41,7 +52,7 @@ public class EnemySpawner : Spawner {
         prefab.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         EnemyShip enemyShip = prefab.GetComponent<EnemyShip>();
         
-        enemyShip.SetTarget(PlayerShip.transform.position);
+        enemyShip.SetTarget(PlayerShip);
 
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour {
     public List<string> TagsToHit;
+    //public List<string> TagsToIgnore;
 
 	void OnCollisionEnter(Collision collision)
 	{

@@ -27,7 +27,7 @@ public class ShieldSpell : Spell {
 
         CreateShield();
         StartCoroutine(ChangeMaterial());
-        return null;
+        yield return null;
 
 
     }

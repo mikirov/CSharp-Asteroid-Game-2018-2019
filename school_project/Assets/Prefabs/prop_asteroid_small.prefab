@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 136362241876314564}
   - component: {fileID: 114650584662402292}
   - component: {fileID: 114215871120247160}
-  - component: {fileID: 114348341456347106}
   - component: {fileID: 114551222100918546}
   - component: {fileID: 114234736662227852}
   m_Layer: 0
@@ -139,30 +138,6 @@ MonoBehaviour:
   DestructionFXDuration: 0.9
   HitFXDuration: 0.5
   ScoreOnDeath: 5
-  DebugDraw: 0
-  hitsToKill: 1
-  hitScale: 2
-  currentHits: 0
---- !u!114 &114348341456347106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1062156983296966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c60c06903406943881fa0be6fe6c17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToSpawnOnDeath: {fileID: 1638202596137362, guid: b82afbdfc3010c84696527953e124408,
-    type: 2}
-  DestructionFX: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  HitFX: []
-  SpawnDistance: 1
-  DeflectionAngle: 45
-  DestructionFXDuration: 0.9
-  HitFXDuration: 0.5
-  ScoreOnDeath: 10
   DebugDraw: 0
   hitsToKill: 1
   hitScale: 2

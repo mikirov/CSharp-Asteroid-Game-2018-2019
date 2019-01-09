@@ -21,9 +21,10 @@ public class SpellComponent : MonoBehaviour {
             spell.Caster = gameObject;
             StartCoroutine(spell.Cast());
             Destroy(spell, spell.timeActive);
-            Debug.Log("should show cooldown with index:" + index + "and time:" + spell.Cooldown);
+            //Debug.Log("should show cooldown with index:" + index + "and time:" + spell.Cooldown);
             if (spell.Caster.CompareTag("Player"))
             {
+                //Debug.Log("caster casted spell");
                 StartCoroutine(UIManager.Instance.Cooldown(spell.Cooldown, index));
             }
             //spells[index].currentCooldown = spells[index].Cooldown;

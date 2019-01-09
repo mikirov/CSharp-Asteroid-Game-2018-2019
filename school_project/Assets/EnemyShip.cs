@@ -4,31 +4,43 @@ using UnityEngine;
 
 public class EnemyShip : Ship {
 
-    public float rotationSpeed;
+    public float rotationSpeed = 1.0f;
     public float castSpellTime = 2.0f; // cast spell every 2 seconds
-    private Vector3 target;
+    public float shootingDelay = 2.0f;
+    private GameObject target;
 
-    public void SetTarget(Vector3 targetToSet)
+    public void SetTarget(GameObject targetToSet)
     {
         target = targetToSet;
     }
 
+    private float startShootingAfter;
     private bool isMovingRight;
     private void Start()
     {
+        base.Start();
+        startShootingAfter = Time.time + shootingDelay;
         isMovingRight = (Random.Range(0, 100) > 49) ? true : false;
 
     }
-    void Update () {
+    //TODO use FixedUpdate
+    private void FixedUpdate () {
+        
+        
         if (target != null)
         {
-            Debug.Log("target:" + target);
-            LookTarget(target);
-            MoveSideways();
-            MoveForward();
-            if(Time.time % castSpellTime == 0)
+           
+            MoveTowards(target.transform.position);
+
+            RotateAround(target.transform.position);
+            LookTarget(target.transform.position);
+            if (Time.time % castSpellTime == 0)
             {
                 CastSpell(Random.Range(0, 1)); // TODO make it get the number of spells from the spell component
+            }
+            if (Time.time > startShootingAfter)
+            {
+                Shoot();
             }
         }
         else
@@ -37,17 +49,7 @@ public class EnemyShip : Ship {
         }
         
 	}
-    private void MoveSideways()
-    {
-        Vector2 direction = (isMovingRight) ? Vector2.right : Vector2.left;
-        direction *= rotationSpeed;
-        direction *= Time.deltaTime;
-        Move(direction);
 
-    }
-    private void MoveForward()
-    {
-        Vector2 direction = Vector3.forward;
-        Move(direction);
-    }
+
+
 }

@@ -6,7 +6,8 @@ public class ShieldRotator : MonoBehaviour {
 
     [SerializeField]
     private float rotationPerSecond = 30.0f;
-
+    [SerializeField]
+    private List<string> passTroughTags;
 
     private void Update()
     {
@@ -16,6 +17,13 @@ public class ShieldRotator : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
+        foreach(string s in passTroughTags)
+        {
+            if (other.CompareTag(s))
+            {
+                return;
+            }
+        }
         HitReceiver hitReceiver = other.gameObject.GetComponent<HitReceiver>();
         if (hitReceiver)
         {
@@ -23,7 +31,7 @@ public class ShieldRotator : MonoBehaviour {
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 
