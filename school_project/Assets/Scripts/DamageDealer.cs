@@ -6,7 +6,7 @@ public class DamageDealer : MonoBehaviour {
     public List<string> TagsToHit;
     //public List<string> TagsToIgnore;
 
-	void OnCollisionEnter(Collision collision)
+	void OnTriggerEnter(Collider collision)
 	{
         foreach (string TagToHit in TagsToHit)
         {
@@ -19,11 +19,14 @@ public class DamageDealer : MonoBehaviour {
                     hitReceiver.ReceiveHit(gameObject);
 
                 }
-                else 
+                else if (collision.CompareTag("Shield"))
                 {
+                    return;
+                }
+                else {
 
                     Debug.Log("hit receiver not found");
-                    //Destroy(collision.gameObject);
+                    Destroy(collision.gameObject);
                     
                 }
 

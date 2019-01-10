@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Weapon))]
+[RequireComponent(typeof(WeaponComponent))]
 [RequireComponent(typeof(MovementComponent))]
 [RequireComponent(typeof(SpellComponent))]
 [RequireComponent(typeof(HitReceiver))]
-[RequireComponent(typeof(DamageDealer))]
+
 public class Ship : MonoBehaviour {
 
     
 
-    Weapon weapon;
+    WeaponComponent weaponComponent;
     MovementComponent movementComponent;
     SpellComponent spellComponent;
     protected void Start()
     {
-        weapon = GetComponent<Weapon>();
+        weaponComponent = GetComponent<WeaponComponent>();
         movementComponent = GetComponent<MovementComponent>();
         spellComponent = GetComponent<SpellComponent>();
     }
 
     protected void Shoot()
     {
-        weapon.Shoot();
+        weaponComponent.Shoot();
     }
 
 

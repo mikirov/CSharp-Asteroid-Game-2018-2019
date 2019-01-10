@@ -24,6 +24,8 @@ public class BossShip : Ship {
     private void Start()
     {
         base.Start();
+
+
         hitReceiver = gameObject.GetComponent<HitReceiver>();
         if (!hitReceiver)
         {
@@ -42,10 +44,12 @@ public class BossShip : Ship {
     {
         Destroy(gameObject.GetComponent<Weapon>());
         GetComponent<MeshRenderer>().material = rageModeMaterial;
+
+        GetComponent<WeaponComponent>().weapon = rageModeWeapon;
         Instantiate(rageModeWeapon, gameObject.transform);
 
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (!target)
         {

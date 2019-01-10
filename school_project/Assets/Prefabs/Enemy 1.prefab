@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114674260682080712}
   - component: {fileID: 114792737593962104}
   - component: {fileID: 114957105051078174}
-  - component: {fileID: 114108785441312254}
+  - component: {fileID: 114987050893310556}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -136,31 +136,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &114108785441312254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1568453228756064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3988129e1b0a04ea2dded711217140, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToSpawnOnDeath: {fileID: 0}
-  DestructionFX: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-  HitFX:
-  - {fileID: 100000, guid: e4e3908778e56664183247d243c7543d, type: 2}
-  - {fileID: 100000, guid: 84e4037f0ff2d7146baca8c756e353ac, type: 2}
-  SpawnDistance: 2
-  DeflectionAngle: 45
-  DestructionFXDuration: 0.5
-  HitFXDuration: 0.5
-  ScoreOnDeath: 0
-  DebugDraw: 0
-  hitsToKill: 5
-  hitScale: 2
-  currentHits: 0
 --- !u!114 &114674260682080712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TagsToHit:
   - Player
-  - Projectile
 --- !u!114 &114957105051078174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,6 +204,31 @@ MonoBehaviour:
   rotationSpeed: 30
   castSpellTime: 2
   shootingDelay: 2
+--- !u!114 &114987050893310556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1568453228756064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3988129e1b0a04ea2dded711217140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawnOnDeath: {fileID: 0}
+  DestructionFX: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  HitFX:
+  - {fileID: 100000, guid: e4e3908778e56664183247d243c7543d, type: 2}
+  - {fileID: 100000, guid: 84e4037f0ff2d7146baca8c756e353ac, type: 2}
+  SpawnDistance: 2
+  DeflectionAngle: 45
+  DestructionFXDuration: 0.5
+  HitFXDuration: 0.5
+  ScoreOnDeath: 0
+  DebugDraw: 0
+  hitsToKill: 3
+  hitScale: 2
+  currentHits: 0
 --- !u!135 &135376090757887008
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -237,7 +236,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568453228756064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.92

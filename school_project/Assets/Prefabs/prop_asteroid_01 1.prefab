@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114777843055967760}
   - component: {fileID: 114398801112962938}
   - component: {fileID: 135949323383357384}
+  - component: {fileID: 114845290184694926}
   m_Layer: 0
   m_Name: prop_asteroid_01 1
   m_TagString: Asteroid
@@ -115,6 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AsteroidSpeed: 2
   AsteroidAngularSpeed: 2
+  InitialDirection: {x: 0, y: 0, z: 0}
+  followInterval: 2
 --- !u!114 &114777843055967760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +131,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deflection_angle: 30
   scale_factor: 0.5
+  minSize: 0.25
+--- !u!114 &114845290184694926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504693244130178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ced01369092ec6498a2f23fa7f1da8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToSpawnOnDeath: {fileID: 0}
+  DestructionFX: {fileID: 0}
+  HitFX: []
+  SpawnDistance: 2
+  DeflectionAngle: 45
+  DestructionFXDuration: 0.5
+  HitFXDuration: 0.5
+  ScoreOnDeath: 0
+  DebugDraw: 0
+  hitsToKill: 1
+  hitScale: 2
+  currentHits: 0
 --- !u!135 &135949323383357384
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -135,7 +162,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504693244130178}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7517462

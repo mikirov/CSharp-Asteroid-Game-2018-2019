@@ -48,7 +48,7 @@ public class PlayerController : Ship
     {
         if (Input.GetButton("Fire1"))
         {
-            GetComponent<Weapon>().Shoot();
+            Shoot();
         }
     }
 

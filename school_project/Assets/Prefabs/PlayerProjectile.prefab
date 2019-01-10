@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 54290514896842584}
   - component: {fileID: 136207494274945516}
   - component: {fileID: 82628548529106448}
-  - component: {fileID: 114749859940601188}
+  - component: {fileID: 114845804372015136}
   m_Layer: 0
   m_Name: PlayerProjectile
   m_TagString: Projectile
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileDuration: 2
   ProjectileVelocity: 15
---- !u!114 &114749859940601188
+--- !u!114 &114845804372015136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TagsToHit:
   - Asteroid
-  - Boss
   - Enemy
+  - Boss
 --- !u!136 &136207494274945516
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -262,7 +262,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.07
   m_Height: 0.8

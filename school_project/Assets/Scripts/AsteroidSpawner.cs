@@ -25,7 +25,7 @@ public class AsteroidSpawner : Spawner {
         {
             GameStateController.Instance.OnAsteroidsKilled();
         }
-        Debug.Log("current asteroids: " + CurrentCount);
+        //Debug.Log("current asteroids: " + CurrentCount);
     }
 
     protected override void SetupObject(GameObject prefab)
