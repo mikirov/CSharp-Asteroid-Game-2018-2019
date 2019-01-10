@@ -22,7 +22,7 @@ public class HitReceiver : MonoBehaviour {
 
     public virtual void ReceiveHit(GameObject damageDealer)
     {
-        
+        Debug.Log("receive hit called", damageDealer);
         currentHits++;
         if (currentHits == hitsToKill)
         {

@@ -7,7 +7,8 @@ public class EnemyHitReceiver : HitReceiver {
     public override void ReceiveHit(GameObject damageDealer)
     {
         base.ReceiveHit(damageDealer);
-        if(currentHits == hitsToKill)
+        Debug.Log("enemy hit recceiver called");
+        if (currentHits == hitsToKill)
         {
             EnemySpawner.Instance.CurrentCount -= 1;
         }

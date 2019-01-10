@@ -19,10 +19,14 @@ public class DamageDealer : MonoBehaviour {
                     hitReceiver.ReceiveHit(gameObject);
 
                 }
-                else
+                else 
                 {
-                    Destroy(collision.gameObject);
+
+                    Debug.Log("hit receiver not found");
+                    //Destroy(collision.gameObject);
+                    
                 }
+
 
             }
         }

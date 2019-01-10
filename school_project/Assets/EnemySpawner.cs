@@ -42,7 +42,7 @@ public class EnemySpawner : Spawner {
             GameStateController.Instance.OnEnemiesKilled();
         }
 
-        Debug.Log("wave:" + currentWave + "currentCount:" + CurrentCount);
+        //Debug.Log("wave:" + currentWave + "currentCount:" + CurrentCount);
 
     }
 

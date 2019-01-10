@@ -53,7 +53,7 @@ public abstract class Spawner: MonoBehaviour {
         }
         else if(PlayerShip == null)
         {
-            Debug.Log("playership not set");
+            //Debug.Log("playership not set");
         }
     }
 

@@ -6,7 +6,9 @@ public class PlayerHitReceiver : HitReceiver{
     public override void ReceiveHit(GameObject damageDealer)
     {
         base.ReceiveHit(damageDealer);
-        if(currentHits == hitsToKill)
+
+        Debug.Log("receive hit called in player receiver", damageDealer);
+        if (currentHits == hitsToKill)
         {
             GameStateController.Instance.OnPlayerDied();
         }

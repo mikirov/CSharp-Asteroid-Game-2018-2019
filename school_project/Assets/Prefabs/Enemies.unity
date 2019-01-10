@@ -342,7 +342,7 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!114 &942573831 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114169969793243746, guid: ff2bacde115fa2547b82cafbfd3e4785,
+  m_CorrespondingSourceObject: {fileID: 114161876910145842, guid: dadbffe502ea7554192f2ccce12b9e36,
     type: 2}
   m_PrefabInternal: {fileID: 1876124670}
   m_Script: {fileID: 11500000, guid: 0eff03cb1244a94499c0da6dc3d53cc2, type: 3}
@@ -748,47 +748,67 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 114183345204920938, guid: dadbffe502ea7554192f2ccce12b9e36,
+        type: 2}
+      propertyPath: TagsToHit.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0.000000021855694
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4045986646364870, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 4165699209194788, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1479648867328380, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+    - target: {fileID: 1220596778996020, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
       propertyPath: m_Name
       value: TUES_PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 135497835274926814, guid: ff2bacde115fa2547b82cafbfd3e4785,
+    - target: {fileID: 114183345204920938, guid: dadbffe502ea7554192f2ccce12b9e36,
         type: 2}
-      propertyPath: m_Enabled
+      propertyPath: TagsToHit.Array.data[0]
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114183345204920938, guid: dadbffe502ea7554192f2ccce12b9e36,
+        type: 2}
+      propertyPath: TagsToHit.Array.data[1]
+      value: EnemyProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 114083278594698678, guid: dadbffe502ea7554192f2ccce12b9e36,
+        type: 2}
+      propertyPath: hitsToKill
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114083278594698678, guid: dadbffe502ea7554192f2ccce12b9e36,
+        type: 2}
+      propertyPath: DebugDraw
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ff2bacde115fa2547b82cafbfd3e4785, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: dadbffe502ea7554192f2ccce12b9e36, type: 2}
   m_IsPrefabAsset: 0
