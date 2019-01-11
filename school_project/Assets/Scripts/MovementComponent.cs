@@ -44,10 +44,10 @@ public class MovementComponent : MonoBehaviour {
         
         float step = movementSpeed * Time.deltaTime;
         Vector3 moveTowards = Vector3.MoveTowards(transform.position, target, step);
-        if (!isOutsideScreen(moveTowards))
-        {
+        //if (!isOutsideScreen(moveTowards))
+        //{
             GetComponent<Rigidbody>().MovePosition(moveTowards);
-        }
+        //}
     }
     public void RotateAround(Vector3 target)
     {
