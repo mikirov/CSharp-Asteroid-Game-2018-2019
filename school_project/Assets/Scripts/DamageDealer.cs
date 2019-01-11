@@ -12,7 +12,16 @@ public class DamageDealer : MonoBehaviour {
         {
             if (collision.gameObject.CompareTag(TagToHit))
             {
-                Destroy(gameObject);
+                
+                HitReceiver hitReceiverSelf = gameObject.GetComponent<HitReceiver>();
+                if (hitReceiverSelf)
+                {
+                    hitReceiverSelf.ReceiveHit(collision.gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
                 HitReceiver hitReceiver = collision.gameObject.GetComponent<HitReceiver>();
                 if (hitReceiver)
                 {

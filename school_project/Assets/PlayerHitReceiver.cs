@@ -12,6 +12,7 @@ public class PlayerHitReceiver : HitReceiver{
         {
             GameStateController.Instance.OnPlayerDied();
         }
+        UIManager.Instance.ChangeHp(gameObject);
     }
 
 }

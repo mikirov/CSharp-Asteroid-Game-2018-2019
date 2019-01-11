@@ -54,6 +54,7 @@ public class HitReceiver : MonoBehaviour {
             spawnedFX.transform.localScale *= hitScale;
             Destroy(spawnedFX, HitFXDuration);
         }
+        //UIManager.Instance.ChangeHp(gameObject);
     }
 
     

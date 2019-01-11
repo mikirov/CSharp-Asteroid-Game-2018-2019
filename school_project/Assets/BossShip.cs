@@ -8,7 +8,8 @@ public class BossShip : Ship {
     Weapon rageModeWeapon;
     [SerializeField]
     Material rageModeMaterial;
-
+    [SerializeField]
+    private float shootingDelay = 0.5f;
     [Range(0, 1)]
     public float rageModeHPMissing = 0.7f;
 
@@ -16,6 +17,7 @@ public class BossShip : Ship {
 
     private GameObject target;
 
+    private float startShootingAfter;
     public void SetTarget(GameObject targetToSet)
     {
         target = targetToSet;
@@ -24,7 +26,7 @@ public class BossShip : Ship {
     private void Start()
     {
         base.Start();
-
+        startShootingAfter = Time.time + shootingDelay;
 
         hitReceiver = gameObject.GetComponent<HitReceiver>();
         if (!hitReceiver)
@@ -64,7 +66,10 @@ public class BossShip : Ship {
         {
             EnableRageMode();
         }
-
-        Shoot();
+        if (Time.time > startShootingAfter)
+        {
+            Shoot();
+        }
+        
     }
 }

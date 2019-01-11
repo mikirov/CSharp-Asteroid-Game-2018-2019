@@ -15,40 +15,51 @@ public class MovementComponent : MonoBehaviour {
     }
     public void Move(float x, float y)
     {
+
+
         Vector3 direction = new Vector3(x, 0, y);
         direction = direction.normalized;
         direction = direction * movementSpeed * Time.deltaTime;
 
-        rb.MovePosition(transform.position + direction);
-        if (isOutsideScreen())
+        Vector3 newPosition = transform.position + direction;
+        if (!isOutsideScreen(newPosition))
         {
-            rb.MovePosition(transform.position - direction);
+            rb.MovePosition(transform.position + direction);
         }
+
+
     }
     public void Move(Vector3 direction)
     {
-        
+
+
         direction = direction.normalized;
         direction = direction * movementSpeed * Time.deltaTime;
+
         rb.MovePosition(transform.position + direction);
-        if (isOutsideScreen())
-        {
-            rb.MovePosition(transform.position - direction);
-        }
+
     }
     public void MoveTowards(Vector3 target)
     {
         
         float step = movementSpeed * Time.deltaTime;
         Vector3 moveTowards = Vector3.MoveTowards(transform.position, target, step);
-        GetComponent<Rigidbody>().MovePosition(moveTowards);
+        if (!isOutsideScreen(moveTowards))
+        {
+            GetComponent<Rigidbody>().MovePosition(moveTowards);
+        }
     }
     public void RotateAround(Vector3 target)
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         Quaternion q = Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, Vector3.up);
-        rb.MovePosition(q * (rb.transform.position - target) + target);
-        rb.MoveRotation(rb.transform.rotation * q);
+        Vector3 newPosition = q * (rb.transform.position - target) + target;
+        if (!isOutsideScreen(newPosition))
+        {
+            rb.MovePosition(newPosition);
+            rb.MoveRotation(rb.transform.rotation * q);
+        }
+        //rb.MoveRotation(rb.transform.rotation * q);
 
     }
 
@@ -65,9 +76,9 @@ public class MovementComponent : MonoBehaviour {
         rb.MoveRotation(newRotation);
     }
 
-    private bool isOutsideScreen()
+    private bool isOutsideScreen(Vector3 position)
     {
-        Vector3 viewportPos = Camera.main.WorldToViewportPoint(gameObject.transform.position);
+        Vector3 viewportPos = Camera.main.WorldToViewportPoint(position);
         bool wrapped = false;
 
         for (int i = 0; i < 2; ++i)

@@ -194,7 +194,7 @@ MonoBehaviour:
   DeflectionAngle: 45
   DestructionFXDuration: 0.5
   HitFXDuration: 0.5
-  ScoreOnDeath: 0
+  ScoreOnDeath: 100
   DebugDraw: 0
   hitsToKill: 50
   hitScale: 2

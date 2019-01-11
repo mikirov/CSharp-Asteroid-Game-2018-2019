@@ -36,7 +36,7 @@ public class EnemyShip : Ship {
             LookTarget(target.transform.position);
             if (Time.time % castSpellTime == 0)
             {
-                CastSpell(Random.Range(0, 1)); // TODO make it get the number of spells from the spell component
+                CastSpell(Random.Range(0, 2)); // TODO make it get the number of spells from the spell component
             }
             if (Time.time > startShootingAfter)
             {

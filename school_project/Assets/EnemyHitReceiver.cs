@@ -12,5 +12,6 @@ public class EnemyHitReceiver : HitReceiver {
         {
             EnemySpawner.Instance.CurrentCount -= 1;
         }
+        UIManager.Instance.ChangeHp(gameObject);
     }
 }

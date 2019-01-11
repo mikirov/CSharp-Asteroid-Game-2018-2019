@@ -10,5 +10,6 @@ public class BossHitReceiver : HitReceiver {
         {
             GameStateController.Instance.OnBossDied();
         }
+        UIManager.Instance.ChangeHp(gameObject);
     }
 }

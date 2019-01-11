@@ -15,7 +15,7 @@ public class PlayerShip : Ship {
         }
         if (EnemySpawner.Instance)
         {
-            EnemySpawner.Instance.RegisterPlayer(gameObject);
+           EnemySpawner.Instance.RegisterPlayer(gameObject);
         }
         //DontDestroyOnLoad(gameObject);
     }

@@ -44,8 +44,14 @@ public class GameStateController : MonoBehaviour {
     }
     public void RegisterPlayer(GameObject playerToSet)
     {
-        player = playerToSet;
-        CurrentScore = 0;
+        if (!player)
+        {
+            player = playerToSet;
+            if (SceneManager.GetActiveScene().name == AsteroidScene)
+            {
+                CurrentScore = 0;
+            }
+        }
     }
     
     public void AddPlayerPosition(Vector3 position)
@@ -126,6 +132,7 @@ public class GameStateController : MonoBehaviour {
     {
         SceneManager.LoadScene(AsteroidScene);
         lastScene = AsteroidScene;
+        //AsteroidSpawner.Instance.RegisterPlayer(player);
     }
     public void LoadBossBattleScene()
     {
@@ -136,6 +143,7 @@ public class GameStateController : MonoBehaviour {
     {
         SceneManager.LoadScene(EnemyScene);
         lastScene = EnemyScene;
+        //EnemySpawner.Instance.RegisterPlayer(player);
     }
     public void LoadLastScene()
     {

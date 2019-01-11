@@ -346,7 +346,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1390761930}
-        m_MethodName: LoadLastScene
+        m_MethodName: LoadAsteroidScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -988,6 +988,7 @@ MonoBehaviour:
   BossBattleScene: BossBattle
   WinScene: WinScene
   MainMenuScene: Menu
+  EnemyScene: Enemies
   CurrentAsteroids: 0
 --- !u!4 &1390761931
 Transform:

@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Text scoreLabel;
     [SerializeField] private string scoreText = "Score: {0}";
-
+    [SerializeField] private GameObject canvas;
 
     //private Stat playerHealthBar;
     //private Stat enemyHealthBar;
@@ -22,14 +22,21 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(canvas);
         }
         else
         {
             Destroy(gameObject);
         }
     }
-
+    public void ChangeHp(GameObject target)
+    {
+        HitReceiver hitReceiver = target.GetComponent<HitReceiver>();
+        float hp = 1 - (float)hitReceiver.currentHits / (float)hitReceiver.hitsToKill;
+        Debug.Log("hp:" + hp);
+        target.GetComponentInChildren<Canvas>().GetComponentsInChildren<Image>()[1].fillAmount = hp;
+    }
     void Update()
     {
         uint currentScore = 0;
@@ -39,6 +46,8 @@ public class UIManager : MonoBehaviour
             currentScore = gameStateController.GetCurrentScore();
         }
         scoreLabel.text = string.Format(scoreText, currentScore);
+
+
     }
 
 
