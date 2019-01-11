@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenuHandler : MonoBehaviour {
 
-	public string GameScene = "Main";
+	public string GameScene = "Asteroids";
     public string MainMenu = "Menu";
 
 	public void RestartGame()

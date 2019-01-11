@@ -150,7 +150,7 @@ MonoBehaviour:
   GameOverScreenDelay: 0.75
   WinScreenDelay: 2
   GameOverScene: GameOver
-  AsteroidScene: AsteroidsReworked
+  AsteroidScene: Asteroids
   BossBattleScene: BossBattle
   WinScene: WinScene
   MainMenuScene: MainMenu
@@ -214,7 +214,7 @@ Prefab:
     - target: {fileID: 224694438714102216, guid: acb0c7aabb9cf024fb297836ce5446c3,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224694438714102216, guid: acb0c7aabb9cf024fb297836ce5446c3,
         type: 2}
@@ -275,6 +275,46 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -491.38184
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 966.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 98.099945
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 501.90002
+      objectReference: {fileID: 0}
+    - target: {fileID: 224732677954211796, guid: acb0c7aabb9cf024fb297836ce5446c3,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb0c7aabb9cf024fb297836ce5446c3, type: 2}
@@ -781,7 +821,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4345239854355680, guid: 867565a270ef1c146b1b0eacbd9090ca, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1203336586750308, guid: 867565a270ef1c146b1b0eacbd9090ca, type: 2}
       propertyPath: m_Name

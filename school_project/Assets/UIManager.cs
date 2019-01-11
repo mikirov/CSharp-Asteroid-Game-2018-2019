@@ -22,8 +22,8 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(canvas);
+            //DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(canvas);
         }
         else
         {

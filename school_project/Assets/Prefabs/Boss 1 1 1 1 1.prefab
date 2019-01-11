@@ -81,7 +81,6 @@ GameObject:
   - component: {fileID: 114927372291637666}
   - component: {fileID: 114910476177269860}
   - component: {fileID: 114861532309513700}
-  - component: {fileID: 114706135982707778}
   - component: {fileID: 114217982388613574}
   m_Layer: 0
   m_Name: Boss 1 1 1 1 1
@@ -291,19 +290,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &114706135982707778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1507485112903320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2cfeb162fa247f41bed5d53ef9b2947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TagsToHit:
-  - Player
 --- !u!114 &114708334245886806
 MonoBehaviour:
   m_ObjectHideFlags: 1

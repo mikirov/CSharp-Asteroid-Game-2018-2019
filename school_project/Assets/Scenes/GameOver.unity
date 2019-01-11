@@ -345,8 +345,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1390761930}
-        m_MethodName: LoadAsteroidScene
+      - m_Target: {fileID: 1576063671}
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1390761930}
+      - m_Target: {fileID: 1576063671}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -954,50 +954,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1390761929
+--- !u!1 &1576063670
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1390761931}
-  - component: {fileID: 1390761930}
+  - component: {fileID: 1576063672}
+  - component: {fileID: 1576063671}
   m_Layer: 0
-  m_Name: GameStateController
+  m_Name: GameOverHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1390761930
+--- !u!114 &1576063671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1390761929}
+  m_GameObject: {fileID: 1576063670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c1789d51216ae419a8c0ba8eebcecf, type: 3}
+  m_Script: {fileID: 11500000, guid: d1d15befd0b6ec64ba300e0732b2db12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreenDelay: 2
-  WinScreenDelay: 2
-  GameOverScene: GameOver
-  AsteroidScene: Asteroids
-  BossBattleScene: BossBattle
-  WinScene: WinScene
-  MainMenuScene: Menu
-  EnemyScene: Enemies
-  CurrentAsteroids: 0
---- !u!4 &1390761931
+  GameScene: Asteroids
+  MainMenu: Menu
+--- !u!4 &1576063672
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1390761929}
+  m_GameObject: {fileID: 1576063670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.117054455, y: 0.78078645, z: -4.2851562}
+  m_LocalPosition: {x: 654.8763, y: 397.86865, z: 62.04164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1079,8 +1072,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1390761930}
-        m_MethodName: ShowMainMenuScreen
+      - m_Target: {fileID: 1576063671}
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

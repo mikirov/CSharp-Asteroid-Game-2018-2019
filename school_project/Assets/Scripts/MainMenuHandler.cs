@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuHandler : MonoBehaviour {
 
-    public string PVEGame = "Main";
-    public string PVAiGame = "BossBattle";
-
+    public string PVEGame = "Asteroids";
+    public string PVAiGame = "Enemies";
+    public string BossBattle = "BossBattle";
 
     public void loadPVE()
     {
@@ -16,5 +16,13 @@ public class MainMenuHandler : MonoBehaviour {
     public void loadPvAI()
     {
         SceneManager.LoadScene(PVAiGame);
+    }
+    public void loadBossBattle()
+    {
+        SceneManager.LoadScene(BossBattle);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
