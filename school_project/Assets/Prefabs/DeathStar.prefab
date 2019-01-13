@@ -256,7 +256,7 @@ MonoBehaviour:
   rageModeMaterials:
   - {fileID: 2100000, guid: a10aaf2c175be28478dc40937add5417, type: 2}
   - {fileID: 2100000, guid: a937700357f89ea4db8d51294d889065, type: 2}
-  shootingDelay: 0.5
+  shootingDelay: 1
   rageModeHPMissing: 0.6
 --- !u!114 &114862494996500034
 MonoBehaviour:

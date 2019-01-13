@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 30
   castSpellTime: 2
-  shootingDelay: 0.5
+  shootingDelay: 1
 --- !u!114 &114729489003730204
 MonoBehaviour:
   m_ObjectHideFlags: 1
