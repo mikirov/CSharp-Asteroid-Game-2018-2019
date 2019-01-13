@@ -22,9 +22,9 @@ public class Ship : MonoBehaviour {
         spellComponent = GetComponent<SpellComponent>();
     }
 
-    protected void Shoot()
+    protected void Shoot(Transform target = null)
     {
-        weaponComponent.Shoot();
+        weaponComponent.Shoot(target);
     }
 
 
@@ -56,6 +56,10 @@ public class Ship : MonoBehaviour {
     protected void CastSpell(int index)
     {
         spellComponent.CastSpell(index);
+    }
+    protected void SetWeapon(Weapon weapon)
+    {
+        weaponComponent.SetWeapon(weapon);
     }
 
 

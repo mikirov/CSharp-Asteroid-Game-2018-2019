@@ -330,8 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08aee880450f40b409251421dd587cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 114185816777298660, guid: 169434aa162447e46ac5e802e556cc41, type: 2}
-  SpawnPosition: {fileID: 4025578195754892}
+  weaponPrefab: {fileID: 114185816777298660, guid: 90e9074335d302e4f8a9fe4b3097e838,
+    type: 2}
+  SpawnPositions:
+  - {fileID: 4025578195754892}
+  weapon: {fileID: 114185816777298660, guid: 90e9074335d302e4f8a9fe4b3097e838, type: 2}
 --- !u!114 &114650618607259706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -345,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 30
   castSpellTime: 2
-  shootingDelay: 2
+  shootingDelay: 0.5
 --- !u!114 &114729489003730204
 MonoBehaviour:
   m_ObjectHideFlags: 1

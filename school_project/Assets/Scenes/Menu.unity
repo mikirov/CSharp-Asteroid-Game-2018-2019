@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PVEGame: Asteroids
-  PVAiGame: BossBattle
+  PVAiGame: Enemies
   BossBattle: BossBattle
 --- !u!4 &704663954
 Transform:
@@ -716,7 +716,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 81baa4105903b244eb722e67d5f7296d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61055f453c3d0ff40a9af3e5c2699260, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1264,7 +1264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player vs Ai
+  m_Text: 'Enemies
 
 '
 --- !u!222 &1469398832

@@ -16,7 +16,7 @@ public class BossSpawner : MonoBehaviour {
     private void Start()
     {
         GameObject boss = Instantiate(bossPrefab);
-        boss.transform.position = new Vector3(position.position.x, 0, position.position.z);
+        //boss.transform.position = new Vector3(position.position.x, 0, position.position.z);
         BossShip bossShip = boss.GetComponent<BossShip>();
         bossShip.SetTarget(target);
         

@@ -9,6 +9,7 @@ public class GameStateController : MonoBehaviour {
     public float WinScreenDelay = 2.0f;
     public string GameOverScene = "GameOver";
     public string AsteroidScene = "Asteroids";
+    public string PostAsteroidScene = "PostAsteroids";
     public string BossBattleScene = "BossBattle";
     public string WinScene = "WinScene";
     public string MainMenuScene = "Menu";
@@ -92,7 +93,13 @@ public class GameStateController : MonoBehaviour {
     }
     public void OnAsteroidsKilled()
     {
-        LoadEnemyScene();
+        LoadPostAsteroidScene();
+        Invoke("LoadEnemyScene", 5);
+            //LoadEnemyScene();
+    }
+    public void LoadPostAsteroidScene()
+    {
+        SceneManager.LoadScene(PostAsteroidScene);
     }
     public void OnEnemiesKilled()
     {

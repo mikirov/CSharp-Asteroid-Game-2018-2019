@@ -7,7 +7,7 @@ public class BossShip : Ship {
     [SerializeField]
     Weapon rageModeWeapon;
     [SerializeField]
-    Material rageModeMaterial;
+    List<Material> rageModeMaterials;
     [SerializeField]
     private float shootingDelay = 0.5f;
     [Range(0, 1)]
@@ -45,8 +45,9 @@ public class BossShip : Ship {
     private void EnableRageMode()
     {
         Destroy(gameObject.GetComponent<Weapon>());
-        GetComponent<MeshRenderer>().material = rageModeMaterial;
+        GetComponent<MeshRenderer>().materials = rageModeMaterials.ToArray();
 
+        //SetWeapon(rageModeWeapon);
         GetComponent<WeaponComponent>().weapon = rageModeWeapon;
         Instantiate(rageModeWeapon, gameObject.transform);
 
@@ -60,7 +61,7 @@ public class BossShip : Ship {
            
         }
         //Debug.Log("target: " + target.transform.position);
-        LookTarget(target.transform.position);
+        //LookTarget(target.transform.position);
 
         if (ShouldEnableRageMode())
         {
@@ -68,7 +69,7 @@ public class BossShip : Ship {
         }
         if (Time.time > startShootingAfter)
         {
-            Shoot();
+            Shoot(target.transform);
         }
         
     }

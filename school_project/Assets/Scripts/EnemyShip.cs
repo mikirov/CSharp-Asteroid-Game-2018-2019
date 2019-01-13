@@ -6,7 +6,7 @@ public class EnemyShip : Ship {
 
     public float rotationSpeed = 1.0f;
     public float castSpellTime = 2.0f; // cast spell every 2 seconds
-    public float shootingDelay = 2.0f;
+    public float shootingDelay = 1.0f;
     private GameObject target;
 
     public void SetTarget(GameObject targetToSet)
@@ -41,6 +41,7 @@ public class EnemyShip : Ship {
             if (Time.time > startShootingAfter)
             {
                 Shoot();
+                //Debug.Log("enemy shooting target");
             }
         }
         else

@@ -10,6 +10,6 @@ public abstract class Weapon : MonoBehaviour {
     [HideInInspector]
     public float NextShotTime = 0.0f;
 
-    public abstract void Shoot(Transform SpawnPosition);
+    public abstract void Shoot(Transform SpawnPosition, Transform target = null);
 
 }

@@ -48,11 +48,12 @@ public class EnemySpawner : Spawner {
 
     protected override void SetupObject(GameObject prefab)
     {
-        //prefab.transform.position = new Vector3(prefab.transform.position.x, 0, prefab.transform.position.z);
+        prefab.transform.position = new Vector3(prefab.transform.position.x, 0, prefab.transform.position.z);
         prefab.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         EnemyShip enemyShip = prefab.GetComponent<EnemyShip>();
         
         enemyShip.SetTarget(PlayerShip);
+        Debug.Log("enemy target set");
 
     }
 }

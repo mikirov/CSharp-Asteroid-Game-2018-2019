@@ -9,17 +9,23 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: df7bdb249c36b2543b1039c14187684d
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 707477eab52a7374687bbefd33075af1
   - enabled: 0
-    path: Assets/Prefabs/Asteroids.unity
+    path: 
     guid: 531c3bb582eb4b24b8f883addb342623
   - enabled: 1
     path: Assets/Scenes/Asteroids.unity
     guid: f7d6031115b645c49aceac7955522839
   - enabled: 0
-    path: Assets/Prefabs/Enemies.unity
+    path: 
     guid: 2a9ce1ba5e02e2e47acebf49f96e34c4
+  - enabled: 1
+    path: Assets/Scenes/PostAsteroids.unity
+    guid: 1e59689b4fe196c4c8a0d24f1921c7ac
   - enabled: 1
     path: Assets/Scenes/Enemies.unity
     guid: c9aeb4d9a67c10147976903561566f14
