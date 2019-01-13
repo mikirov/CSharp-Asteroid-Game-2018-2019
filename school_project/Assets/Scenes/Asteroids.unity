@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f202d1191630a044ba197b0f81aba1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count: 8
+  Count: 10
   Prefab: {fileID: 1577336602019996, guid: 150cdef8f70d6484fa0ef47585d68f4a, type: 2}
   PlayableGridCellSize: 2.2
   PlayerSafeCells: 1
