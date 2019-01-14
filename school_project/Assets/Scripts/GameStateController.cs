@@ -34,11 +34,7 @@ public class GameStateController : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    private void Start()
-    {
-        
-        playerPositionAtTime = new List<Vector4>();
-    }
+
     public void SetCurrentAsteroids(uint count)
     {
         CurrentAsteroids = count;
@@ -55,23 +51,7 @@ public class GameStateController : MonoBehaviour {
         }
     }
     
-    public void AddPlayerPosition(Vector3 position)
-    {
-        Vector4 positionAtTime = new Vector4(position.x, position.y, position.z, Time.time);
-        playerPositionAtTime.Add(positionAtTime);
-    }
-    public Vector3? GetPositionAtTime(float time)
-    {
-        for(int i = 0; i < playerPositionAtTime.Count; i++)
-        {
-            if(playerPositionAtTime[i].w - time <= Time.deltaTime)
-            {
-                Vector3 result = new Vector3(playerPositionAtTime[i].x, playerPositionAtTime[i].y, playerPositionAtTime[i].z);
-                return result;
-            }
-        }
-        return null;
-    }
+
 
 
 
@@ -155,13 +135,6 @@ public class GameStateController : MonoBehaviour {
     public void LoadLastScene()
     {
         SceneManager.LoadScene(lastScene);
-    }
-
-    private void Update()
-    {
-        if (!player) return;
-        AddPlayerPosition(player.transform.position);
-        
     }
 
 }

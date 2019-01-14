@@ -21,6 +21,7 @@ public class PlayerShip : Ship {
     }
     // Update is called once per frame
     private void Update () {
+        base.Update();
         UpdateShootInputs();
         UpdateSpellInputs();
     }

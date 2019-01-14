@@ -23,6 +23,10 @@ public class EnemyShip : Ship {
         isMovingRight = (Random.Range(0, 100) > 49) ? true : false;
 
     }
+    private void Update()
+    {
+        base.Update();
+    }
     //TODO use FixedUpdate
     private void FixedUpdate () {
         

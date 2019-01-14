@@ -21,8 +21,8 @@ public class TimeTravelSpell : Spell {
     }
     public override IEnumerator Cast()
     {
-
-        Vector3? newPosition = GameStateController.Instance.GetPositionAtTime(Time.time - timeBack);
+        Vector3? newPosition = Caster.GetComponent<Ship>().GetPositionAtTime(Time.time - timeBack);
+        
         if (newPosition != null) {
             Caster.transform.position = (Vector3)newPosition;
             GameObject effect = Instantiate(TravelFx, Caster.transform);
